@@ -106,8 +106,8 @@ function row1() {
 }
 
 function keyPressed() {
-  if (mouseX < 600 && mouseX > 500) {
-    if (mouseY < 50 && mouseY > 20) {
+  if (mouseX < 550 && mouseX > 400) {
+    if (mouseY < 70 && mouseY > 20) {
       if (keyCode == LEFT_ARROW) {
         skinC1 = skinC1 - 5;
       } else if (keyCode == RIGHT_ARROW) {
@@ -124,8 +124,8 @@ function keyPressed() {
 }
 
 function highlight() {
-  if (mouseX < 300 && mouseX > 100) {
-    if (mouseY < 150 && mouseY > 100) {
+  if (mouseX < 550 && mouseX > 400) {
+    if (mouseY < 70 && mouseY > 20) {
       objectStroke = 5;
     } else if (mouseY < 350 && mouseY > 300) {
       objectStroke2 = 5;
