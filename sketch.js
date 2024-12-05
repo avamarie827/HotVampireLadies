@@ -7,11 +7,19 @@ let base3;
 let base4;
 let base5;
 let base6;
+let normale;
+let borede;
+let winke;
 let faceTrigger = false;
 
 function preload() {
 //Msc Images//
 bckgrd = loadImage("Msc_assets/background.PNG");
+
+//expressions
+normale = loadImages("expressions/normale.PNG")
+borede = loadImages("expressions/borede.PNG")
+normale = loadImages("expressions/normale.PNG")
 
 //bases
 baseBase = loadImage("base/basebase.PNG")
@@ -21,9 +29,8 @@ base3 = loadImages("base/base3.PNG")
 base4 = loadImages("base/base4.PNG")
 base5 = loadImages("base/base5.PNG")
 base6 = loadImages("base/base6.PNG")
-
 }
-//test
+
 function setup() {
   createCanvas(600, 600);
 }
