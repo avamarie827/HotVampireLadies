@@ -21,7 +21,7 @@ let lightBrown;
 let pinkBlonde;
 let white;
 let faceTrigger = false;
-let skinC1 = 300;
+let skinC1 = 540;
 let skinC2 = 300;
 let objectStroke = 1;
 let objectStroke2 = 1;
@@ -68,6 +68,7 @@ function draw() {
   image(bckgrd, 0,0, width, height, 0,0, bckgrd.width, bckgrd.height,CONTAIN);
   image(baseBase, 0, 130, 328, 472);
   nemoNemo();
+  row1();
   highlight();
 }
 
@@ -94,9 +95,19 @@ function nemoNemo() {
   rect(430, 518, 60, 50); 
 }
 
+function row1() {
+  stroke(0);
+  strokeWeight(objectStroke);
+  ellipse(skinC1, 55, 30);
+  ellipse(skinC1 - 50, 55, 30);
+  ellipse(skinC1 - 100, 55, 30);
+  ellipse(skinC1 - 150, 55, 30);
+  strokeWeight(1);
+}
+
 function keyPressed() {
-  if (mouseX < 300 && mouseX > 100) {
-    if (mouseY < 150 && mouseY > 100) {
+  if (mouseX < 600 && mouseX > 500) {
+    if (mouseY < 50 && mouseY > 20) {
       if (keyCode == LEFT_ARROW) {
         skinC1 = skinC1 - 5;
       } else if (keyCode == RIGHT_ARROW) {
