@@ -17,18 +17,18 @@ function preload() {
 bckgrd = loadImage("Msc_assets/background.PNG");
 
 //expressions
-normale = loadImages("expressions/normale.PNG")
-borede = loadImages("expressions/borede.PNG")
-normale = loadImages("expressions/normale.PNG")
+normale = loadImage("expressions/normale.PNG")
+borede = loadImage("expressions/borede.PNG")
+normale = loadImage("expressions/normale.PNG")
 
 //bases
 baseBase = loadImage("base/basebase.PNG")
-base1 = loadImages("base/base1.PNG")
-base2 = loadImages("base/base2.PNG")
-base3 = loadImages("base/base3.PNG")
-base4 = loadImages("base/base4.PNG")
-base5 = loadImages("base/base5.PNG")
-base6 = loadImages("base/base6.PNG")
+base1 = loadImage("base/base1.PNG")
+base2 = loadImage("base/base2.PNG")
+base3 = loadImage("base/base3.PNG")
+base4 = loadImage("base/base4.PNG")
+base5 = loadImage("base/base5.PNG")
+base6 = loadImage("base/base6.PNG")
 }
 
 function setup() {
