@@ -19,7 +19,7 @@ bckgrd = loadImage("/Msc_assets/background.PNG");
 }
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 600);
 }
 
 function draw() {
