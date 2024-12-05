@@ -25,6 +25,7 @@ let skinC1 = 540;
 let skinC2 = 300;
 let objectStroke = 1;
 let objectStroke2 = 1;
+let skinTone = 'skin';
 
 function preload() {
 //Msc Images//
