@@ -32,6 +32,8 @@ function draw() {
   background(220)
   image(bckgrd, 0,0, width, height, 0,0, bckgrd.width, bckgrd.height,CONTAIN);
   image(baseBase, 200, 0, width, height);
+  nemoNemo();
+}
   
 }
 
@@ -43,4 +45,20 @@ function mousePressed() {
       // add switch statement or if for each design
     }
   }
+}
+
+//boxes
+function nemoNemo() {
+  stroke("#c20059");
+  strokeWeight(6);
+  fill("#d01f6b");
+  rect(358, 458, 210, 50);
+  rect(358, 148, 210, 300);
+  rect(358, 88, 210, 50);
+  rect(358, 28, 210, 50);
+  rect(358, 518, 60, 50);
+    rect(430, 518, 60, 50);
+
+  
+  
 }
