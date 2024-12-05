@@ -10,25 +10,49 @@ let base6;
 let normale;
 let borede;
 let winke;
+let berry;
+let black;
+let blond;
+let curlyBlack;
+let drac;
+let edgy;
+let ginger;
+let lightBrown;
+let pinkBlonde;
+let white;
 let faceTrigger = false;
 
 function preload() {
 //Msc Images//
 bckgrd = loadImage("Msc_assets/background.PNG");
 
+//hair
+berry = loadImage("Hair/Berry.png");
+black = loadImage("Hair/Black.png");
+blond = loadImage("Hair/Blond.png");
+curlyBlack = loadImage("Hair/curlyBlack.png");
+drac = loadImage("Hair/Drac.png");
+edgy = loadImage("Hair/edgy.png");
+ginger = loadImage("Hair/Ginger.png");
+lightBrown = loadImage("Hair/lightBrown.png");
+pinkBlonde = loadImage("Hair/pinkBlonde");
+white = loadImage("Hair/White.png");
+
+
+
 //expressions
-normale = loadImage("expressions/normale.PNG")
-borede = loadImage("expressions/borede.PNG")
-normale = loadImage("expressions/normale.PNG")
+normale = loadImage("expressions/normale.PNG");
+borede = loadImage("expressions/borede.PNG");
+normale = loadImage("expressions/normale.PNG");
 
 //bases
-baseBase = loadImage("base/basebase.PNG")
-base1 = loadImage("base/base1.PNG")
-base2 = loadImage("base/base2.PNG")
-base3 = loadImage("base/base3.PNG")
-base4 = loadImage("base/base4.PNG")
-base5 = loadImage("base/base5.PNG")
-base6 = loadImage("base/base6.PNG")
+baseBase = loadImage("base/basebase.PNG");
+base1 = loadImage("base/base1.PNG");
+base2 = loadImage("base/base2.PNG");
+base3 = loadImage("base/base3.PNG");
+base4 = loadImage("base/base4.PNG");
+base5 = loadImage("base/base5.PNG");
+base6 = loadImage("base/base6.PNG");
 }
 
 function setup() {
