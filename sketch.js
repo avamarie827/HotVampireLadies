@@ -31,10 +31,8 @@ function setup() {
 function draw() {
   background(220)
   image(bckgrd, 0,0, width, height, 0,0, bckgrd.width, bckgrd.height,CONTAIN);
-  image(baseBase, 200, 0, width, height);
+  image(baseBase, 0, 130, 328, 472);
   nemoNemo();
-}
-  
 }
 
 //button shit
