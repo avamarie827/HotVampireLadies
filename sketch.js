@@ -25,7 +25,7 @@ base = loadImage()
 bckgrd = loadImage("/Msc_assets/background.PNG");
 >>>>>>> c61308ecff52ec17922ccbd8eff07fc7d00c7903
 }
-
+//test
 function setup() {
   createCanvas(600, 600);
 }
