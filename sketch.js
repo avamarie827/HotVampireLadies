@@ -1,6 +1,12 @@
 //lets
 let bckgrd;
-let base;
+let baseBase;
+let base1;
+let base2;
+let base3;
+let base4;
+let base5;
+let base6;
 let faceTrigger = false;
 
 function preload() {
@@ -8,7 +14,7 @@ function preload() {
 bckgrd = loadImage("Msc_assets/background.PNG");
 
 //bases
-
+baseBase = loadImage("base/basebase.PNG")
 base1 = loadImages("base/base1.PNG")
 base2 = loadImages("base/base2.PNG")
 base3 = loadImages("base/base3.PNG")
@@ -24,7 +30,8 @@ function setup() {
 
 function draw() {
   background(220)
-  image (bckgrd, 0,0, width, height, 0,0, bckgrd.width, bckgrd.height,CONTAIN);
+  image(bckgrd, 0,0, width, height, 0,0, bckgrd.width, bckgrd.height,CONTAIN);
+  image(baseBase, 200, 0, width, height);
   
 }
 
