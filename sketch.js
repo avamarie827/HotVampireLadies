@@ -77,7 +77,6 @@ function mousePressed() {
   if(mouseX > 300 && mouseX < 350) {
     if(mouseY > 50 && mouseY < 100) {
       faceTrigger = true;
-      // add switch statement or if for each design
     }
   }
 }
