@@ -1,5 +1,8 @@
+//lets
 let bckgrd;
 let base;
+let faceTrigger = false;
+
 function preload() {
 //Msc Images//
 bckgrd = loadImage("Msc_assets/background.PNG");
@@ -23,4 +26,14 @@ function draw() {
   background(220)
   image (bckgrd, 0,0, width, height, 0,0, bckgrd.width, bckgrd.height,CONTAIN);
   
+}
+
+//button shit
+function mousePressed() {
+  if(mouseX > 300 && mouseX < 350) {
+    if(mouseY > 50 && mouseY < 100) {
+      faceTrigger = true;
+      // add switch statement or if for each design
+    }
+  }
 }
