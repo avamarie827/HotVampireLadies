@@ -21,6 +21,10 @@ let lightBrown;
 let pinkBlonde;
 let white;
 let faceTrigger = false;
+let skinC1 = 300;
+let skinC2 = 300;
+let objectStroke = 1;
+let objectStroke2 = 1;
 
 function preload() {
 //Msc Images//
@@ -35,7 +39,7 @@ drac = loadImage("Hair/Drac.png");
 edgy = loadImage("Hair/edgy.png");
 ginger = loadImage("Hair/Ginger.png");
 lightBrown = loadImage("Hair/lightBrown.png");
-pinkBlonde = loadImage("Hair/pinkBlonde");
+pinkBlonde = loadImage("Hair/pinkBlonde.png");
 white = loadImage("Hair/White.png");
 
 
@@ -64,6 +68,7 @@ function draw() {
   image(bckgrd, 0,0, width, height, 0,0, bckgrd.width, bckgrd.height,CONTAIN);
   image(baseBase, 0, 130, 328, 472);
   nemoNemo();
+  highlight();
 }
 
 //button shit
@@ -87,4 +92,38 @@ function nemoNemo() {
   rect(358, 28, 210, 50);
   rect(358, 518, 60, 50);
   rect(430, 518, 60, 50); 
+}
+
+function keyPressed() {
+  if (mouseX < 300 && mouseX > 100) {
+    if (mouseY < 150 && mouseY > 100) {
+      if (keyCode == LEFT_ARROW) {
+        skinC1 = skinC1 - 5;
+      } else if (keyCode == RIGHT_ARROW) {
+        skinC1 = skinC1 + 5;
+      }
+    } else if (mouseY < 350 && mouseY > 300) {
+      if (keyCode == LEFT_ARROW) {
+        skinC2 = skinC2 - 5;
+      } else if (keyCode == RIGHT_ARROW) {
+        skinC2 = skinC2 + 5;
+      }
+    }
+  }
+}
+
+function highlight() {
+  if (mouseX < 300 && mouseX > 100) {
+    if (mouseY < 150 && mouseY > 100) {
+      objectStroke = 5;
+    } else if (mouseY < 350 && mouseY > 300) {
+      objectStroke2 = 5;
+    } else {
+      objectStroke = 1;
+      objectStroke2 = 1;
+    }
+  } else {
+    objectStroke = 1;
+    objectStroke2 = 1;
+  }
 }
