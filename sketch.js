@@ -1,10 +1,10 @@
-//Variables//
 let bckgrd;
-
 function preload() {
-
 //Msc Images//
-bckgrd = loadImage("/Msc_assets/background.PNG");
+bckgrd = loadImage("Msc_assets/background.PNG");
+
+
+
 }
 
 function setup() {
@@ -12,7 +12,6 @@ function setup() {
 }
 
 function draw() {
-  background(220);
-  bckgrd(10,10,10,10);
-
+  background(220)
+  image (bckgrd, 0,0, width, height, 0,0, bckgrd.width, bckgrd.height,CONTAIN);
 }
