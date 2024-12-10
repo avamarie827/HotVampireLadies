@@ -160,8 +160,8 @@ function keyPressed() {
         
         } else if (keyCode == RIGHT_ARROW) {
         skinC1 = skinC1 + 5;
-        if(skinC1 >= 650) {
-          skinC1 = 650;
+        if(skinC1 >= 640) {
+          skinC1 = 640;
         }
         
         
