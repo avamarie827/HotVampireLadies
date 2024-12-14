@@ -35,26 +35,16 @@ let circle6;
 
 function preload() {
 //Msc Images//
-bckgrd = loadImage("Msc_assets/background.PNG");
+bckgrd = loadImage("Msc_assets/Background.PNG");
 
 //hair
-berry = loadImage("Hair/Berry.png");
-black = loadImage("Hair/Black.png");
-blond = loadImage("Hair/Blond.png");
-curlyBlack = loadImage("Hair/curlyBlack.png");
-drac = loadImage("Hair/Drac.png");
-edgy = loadImage("Hair/edgy.png");
-ginger = loadImage("Hair/Ginger.png");
-lightBrown = loadImage("Hair/lightBrown.png");
-pinkBlonde = loadImage("Hair/pinkBlonde.png");
-white = loadImage("Hair/White.png");
+
 
 
 
 //expressions
 normale = loadImage("expressions/normale.PNG");
 borede = loadImage("expressions/borede.PNG");
-normale = loadImage("expressions/normale.PNG");
 
 //bases
 baseBase = loadImage("base/basebase.PNG");
@@ -71,9 +61,13 @@ function setup() {
 }
 
 function draw() {
-  background(220)
-  image(bckgrd, 0,0, width, height, 0,0, bckgrd.width, bckgrd.height,CONTAIN);
-  image(baseBase, 0, 130, 328, 472);
+  background(220);
+  if (bckgrd) {
+    image(bckgrd, 0, 0, width, height);
+  }
+  if (baseBase) {
+    image(baseBase, 0, 130, 328, 472);
+  }
   nemoNemo();
   row1();
   highlight();
@@ -98,7 +92,7 @@ function nemoNemo() {
   rect(358, 88, 210, 50);
   rect(358, 28, 210, 50);
   rect(358, 518, 60, 50);
-  rect(430, 518, 60, 50); 
+  rect(430, 518, 60, 50);
 }
 
 function row1() {
