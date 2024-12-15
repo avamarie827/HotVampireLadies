@@ -1,5 +1,7 @@
 //lets
 let bckgrd;
+
+//base//
 let baseBase;
 let base1;
 let base2;
@@ -7,19 +9,36 @@ let base3;
 let base4;
 let base5;
 let base6;
+
+//expressions//
 let normale;
 let borede;
 let winke;
-let berry;
-let black;
-let blond;
+
+//hair//
+let Berry;
+let berryPixel;
+let Black;
+let blackPixel;
+let Blond;
+let blondePixel;
 let curlyBlack;
-let drac;
+let curlyPixel;
+let Drac;
+let dracPixel;
 let edgy;
-let ginger;
+let edgyPixel;
+let Ginger;
+let gingerPixel;
 let lightBrown;
+let lightBrownpixel;
 let pinkBlonde;
-let white;
+let pinkBlondepixel;
+let White;
+let whitePixel;
+
+
+//msc//
 let faceTrigger = false;
 let skinC1 = 540;
 let skinC2 = 300;
@@ -32,21 +51,45 @@ let circle3;
 let circle4;
 let circle5;
 let circle6;
+let displayImg;
+let empty;
+
+
 
 function preload() {
 //Msc Images//
 bckgrd = loadImage("Msc_Asset/Background.PNG");
+empty = loadImage("Msc_Asset/empty.png");
 
-//hair
+//hair-normal//
+Berry = loadImage("hair/Berry.png");
+Blond = loadImage("hair/Blond.png");
+curlyBlack = loadImage("hair/curlyBlack.png");
+Drac = loadImage("hair/Drac.png");
+edgy = loadImage("hair/edgy.png");
+Ginger = loadImage("hair/Ginger.png");
+lightBrown = loadImage("hair/lightBrown.png");
+pinkBlonde = loadImage("hair/pinkBlonde.png");
+White = loadImage("hair/White.png");
+Black = loadImage("hair/Black.png");
 
+//hair-pixel//
+berryPixel = loadImage("hair/berryPixel.png");
+  blondePixel = loadImage("hair/blondePixel.png");
+  curlyPixel = loadImage("hair/curlyPixel.png");
+  dracPixel = loadImage("hair/dracPixel.png");
+  edgyPixel = loadImage("hair/edgyPixel.png");
+  gingerPixel = loadImage("hair/gingerPixel.png");
+  lightBrownpixel = loadImage("hair/lightBrownpixel.png");
+  pinkBlondePixel = loadImage("hair/pinkBlondePixel.png");
+  whitePixel = loadImage("hair/whitePixel.png");
+  blackPixel = loadImage("hair/blackPixel.png");
 
-
-
-//expressions
+//expressions//
 normale = loadImage("expressions/normale.PNG");
 borede = loadImage("expressions/borede.PNG");
 
-//bases
+//bases//
 baseBase = loadImage("base/basebase.PNG");
 base1 = loadImage("base/base1.PNG");
 base2 = loadImage("base/base2.PNG");
@@ -58,6 +101,8 @@ base6 = loadImage("base/base6.PNG");
 
 function setup() {
   createCanvas(600, 600);
+
+  displayImg = empty;
 }
 
 function draw() {
@@ -71,6 +116,21 @@ function draw() {
   nemoNemo();
   row1();
   highlight();
+
+ //drawing-pixel-ver//
+ image(berryPixel, 358, 165, 45, 45);
+ image(blondePixel, 398, 165, 45, 45);
+ image(curlyPixel, 440, 165, 45, 45);
+ image(dracPixel, 478, 165, 50, 50);
+ image(edgyPixel, 520, 165, 45, 45);
+ image(gingerPixel, 358, 215, 45, 45);
+ image(lightBrownpixel, 398, 215, 45, 45);
+ image(pinkBlondePixel, 440, 215, 45, 45);
+ image(whitePixel, 478, 215, 45, 45);
+ image(blackPixel, 520, 215, 45, 45);
+
+  //hair-clicky//
+image(displayImg, 70,135, 270, 400); 
 }
 
 //button shit
@@ -184,4 +244,29 @@ function highlight() {
     objectStroke = 1;
     objectStroke2 = 1;
   }
+}
+
+  function mousePressed() {
+    if (mouseX >= 358 && mouseX <= 403 && mouseY >= 165 && mouseY <= 210) {
+      displayImg = Berry;
+    } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 165 && mouseY <= 210) {
+      displayImg = Blond;
+    } else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 165 && mouseY <= 210) {
+      displayImg = curlyBlack;
+    } else if (mouseX >= 478 && mouseX <= 528 && mouseY >= 165 && mouseY <= 215) {
+      displayImg = Drac;
+    } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 165 && mouseY <= 210) {
+      displayImg = edgy;
+    } else if (mouseX >= 358 && mouseX <= 403 && mouseY >= 215 && mouseY <= 260) {
+      displayImg = Ginger;
+    } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 215 && mouseY <= 260) {
+      displayImg = lightBrown;
+    }
+    else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 215 && mouseY <= 260) {
+      displayImg = pinkBlonde;
+    } else if (mouseX >= 478 && mouseX <= 528 && mouseY >= 215 && mouseY <= 260) {
+      displayImg = White;
+    } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 215 && mouseY <= 260) {
+      displayImg = Black;
+    }
 }
