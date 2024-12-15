@@ -14,6 +14,13 @@ let base6;
 let normale;
 let borede;
 let winke;
+let heartEyes;
+let straight;
+let orange;
+let pink;
+let purple;
+let smirk;
+let tongue;
 
 //hair//
 let Berry;
@@ -37,6 +44,24 @@ let pinkBlondepixel;
 let White;
 let whitePixel;
 
+//bottoms
+let blackBottoms;
+let bloomers;
+let dress;
+let longSkirt;
+let miniSkirt;
+let ruffle;
+let street;
+let thighHighs;
+let thong;
+
+//accessories
+let bat;
+let chainBag;
+let chains;
+let corset;
+let pearls;
+
 //msc//
 let faceTrigger = false;
 let skinC1 = 540;
@@ -51,6 +76,7 @@ let circle4;
 let circle5;
 let circle6;
 let displayImg;
+let displayImg2;
 let empty;
 
 
@@ -87,6 +113,15 @@ berryPixel = loadImage("hair/berryPixel.png");
 //expressions//
 normale = loadImage("expressions/normale.PNG");
 borede = loadImage("expressions/borede.PNG");
+winke = loadImage("expressions/winky.PNG");
+heartEyes = loadImage("expressions/hearteyes.PNG");
+straight = loadImage("expressions/straight.PNG");
+orange = loadImage("expressions/orange.PNG");
+pink = loadImage("expressions/pink.PNG");
+purple = loadImage("expressions/purple.PNG");
+smirk = loadImage("expressions/smirk.PNG");
+tongue = loadImage("expressions/tongue.PNG");
+
 
 //bases//
 baseBase = loadImage("base/basebase.PNG");
@@ -97,12 +132,30 @@ base4 = loadImage("base/base4.PNG");
 base5 = loadImage("base/base5.PNG");
 base6 = loadImage("base/base6.PNG");
 
+//bottoms
+blackBottoms = loadImage("bottoms/black.PNG");
+bloomers = loadImage("bottoms/bloomers.PNG");
+dress = loadImage("bottoms/dress.PNG");
+longSkirt = loadImage("bottoms/longskirt.PNG");
+miniSkirt = loadImage("bottoms/miniskirt.PNG");
+ruffle = loadImage("bottoms/ruffle.PNG");
+street = loadImage("bottoms/street.PNG");
+thighHighs = loadImage("bottoms/thighhighs.PNG");
+thong = loadImage("bottoms/thong.PNG");
+
+//accessories
+bat = loadImage("accessories/bat.PNG");
+chainBag = loadImage("accessories/chainbag.PNG");
+chains = loadImage("accessories/chains.PNG");
+corset = loadImage("accessories/corset.PNG");
+pearls = loadImage("accessories/pearls.PNG");
 }
 
 function setup() {
   createCanvas(600, 600);
 
   displayImg = empty;
+  displayImg2 = empty;
 }
 
 function draw() {
@@ -117,7 +170,7 @@ function draw() {
   row1();
   highlight();
 
- //drawing-pixel-ver hair//
+ //drawing-pixel-ver//
  image(berryPixel, 358, 165, 45, 45);
  image(blondePixel, 398, 165, 45, 45);
  image(curlyPixel, 440, 165, 45, 45);
@@ -130,7 +183,15 @@ function draw() {
  image(blackPixel, 520, 215, 45, 45);
 
   //hair-clicky//
-image(displayImg, 70,132, 270, 400); 
+image(displayImg, 70,135, 270, 400); 
+
+//accessories
+image(bat, 358, 400, 150, 150);
+image(chainBag, 398, 400, 125, 125);
+image(corset, 440, 400, 150, 150);
+
+//accessories clicker
+image(displayImg2, 0, 130, 328, 472)
 }
 
 //button shit
@@ -247,6 +308,7 @@ function highlight() {
 }
 
   function mousePressed() {
+    //hairs
     if (mouseX >= 358 && mouseX <= 403 && mouseY >= 165 && mouseY <= 210) {
       displayImg = Berry;
     } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 165 && mouseY <= 210) {
@@ -269,4 +331,17 @@ function highlight() {
     } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 215 && mouseY <= 260) {
       displayImg = Black;
     }
+
+    //accessories 
+     else if (mouseX >= 358 && mouseX <= 403 && mouseY >= 470 && mouseY <= 510){
+      displayImg2 = bat;
+     } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 470 && mouseY <= 510){
+      displayImg2 = chainBag;
+     } else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 470 && mouseY <= 510){
+      displayImg2 = corset;
+     }
+
+
+
+
 }
