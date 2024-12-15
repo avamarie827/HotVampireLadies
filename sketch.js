@@ -35,7 +35,7 @@ let circle6;
 
 function preload() {
 //Msc Images//
-bckgrd = loadImage("Msc_assets/Background.PNG");
+bckgrd = loadImage("Msc_Asset/Background.PNG");
 
 //hair
 
