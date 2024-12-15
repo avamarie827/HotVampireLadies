@@ -37,7 +37,6 @@ let pinkBlondepixel;
 let White;
 let whitePixel;
 
-
 //msc//
 let faceTrigger = false;
 let skinC1 = 540;
@@ -97,6 +96,7 @@ base3 = loadImage("base/base3.PNG");
 base4 = loadImage("base/base4.PNG");
 base5 = loadImage("base/base5.PNG");
 base6 = loadImage("base/base6.PNG");
+
 }
 
 function setup() {
@@ -117,7 +117,7 @@ function draw() {
   row1();
   highlight();
 
- //drawing-pixel-ver//
+ //drawing-pixel-ver hair//
  image(berryPixel, 358, 165, 45, 45);
  image(blondePixel, 398, 165, 45, 45);
  image(curlyPixel, 440, 165, 45, 45);
@@ -130,7 +130,7 @@ function draw() {
  image(blackPixel, 520, 215, 45, 45);
 
   //hair-clicky//
-image(displayImg, 70,135, 270, 400); 
+image(displayImg, 70,132, 270, 400); 
 }
 
 //button shit
