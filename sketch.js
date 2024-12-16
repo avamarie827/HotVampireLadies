@@ -341,27 +341,27 @@ function row1() {
   // ellipse(circle6, 55, 30);
 
   // strokeWeight(1);
-
+  fill("#1f1618");
   if(circle1 >= 380 && circle1 <= 580) {
     ellipse(circle1, 55, 30);
   }
-  
+  fill("#362b2e");
   if(circle2 >= 380 && circle2 <= 580) {
     ellipse(circle2, 55, 30);
   }
-  
+  fill("#5f5151");
   if(circle3 >= 380 && circle3 <= 580) {
     ellipse(circle3, 55, 30);
   }
-  
+  fill("#6f6662");
   if(circle4 >= 380 && circle4 <= 580) {
     ellipse(circle4, 55, 30);
   }
-
+  fill("#a89993")
   if(circle5 >= 380 && circle5 <= 580) {
     ellipse(circle5, 55, 30);
   }
-  
+  fill("#efe8e5");
   if(circle6 >= 380 && circle6 <= 580) {
     ellipse(circle6, 55, 30);
   }
@@ -378,7 +378,7 @@ function row1Update(){
 
 function keyPressed() {
   console.log(skinC1);
-  if (mouseX < 550 && mouseX > 400) {
+  if (mouseX < 550 && mouseX > 350) {
     if (mouseY < 70 && mouseY > 20) {
       if (keyCode == LEFT_ARROW) {
         skinC1 = skinC1 - 5;
@@ -405,7 +405,7 @@ function keyPressed() {
 }
 
 function highlight() {
-  if (mouseX < 550 && mouseX > 400) {
+  if (mouseX < 550 && mouseX > 350) {
     if (mouseY < 70 && mouseY > 20) {
       objectStroke = 5;
     } else if (mouseY < 350 && mouseY > 300) {
