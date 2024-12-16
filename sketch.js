@@ -1,5 +1,7 @@
 //lets
 let bckgrd;
+let download;
+let eraser;
 
 //base//
 let baseBase;
@@ -137,6 +139,8 @@ function preload() {
 //Msc Images//
 bckgrd = loadImage("Msc_Asset/Background.PNG");
 empty = loadImage("Msc_Asset/empty.png");
+download = loadImage("Msc_Asset/download.png");
+eraser = loadImage("Msc_Asset/eraser.png");
 
 //hair-normal//
 Berry = loadImage("hair/Berry.png");
@@ -256,8 +260,8 @@ function setup() {
   displayImg = empty;
   displayImg2 = empty;
   displayImg3 = empty;
-  displayImg4 =empty;
-  displayImg5 =empty;
+  displayImg4 = empty;
+  displayImg5 = empty;
   displayImg6 = empty;
   displayImg7 = empty;
   displayImg8 = empty;
@@ -276,7 +280,22 @@ function draw() {
   row1();
   highlight();
 
-   //base
+//eraser and download "buttons"//
+image(eraser,362,525,50,40)
+
+if (mouseX >= 362 && mouseX <= 412 && mouseY >= 525 && mouseY <= 565 && mouseIsPressed) {
+  displayImg = empty;
+  displayImg2 = empty;
+  displayImg3 = empty;
+  displayImg4 = empty;
+  displayImg5 = empty;
+  displayImg6 = empty;
+  displayImg7 = empty;
+  displayImg8 = empty;
+}
+
+image(download,440,525,40,40)
+
 
  //base clicker
  image(displayImg6, 0, 130, 328, 472)
@@ -324,20 +343,7 @@ image(displayImg8, 0, 130, 328, 472)
   //hair-clicky//
 image(displayImg, 70,135, 270, 400); 
 
-//top clicker//
-image(displayImg4, 10,10,10,10,10);
 
-//top pixel//
-image(top1Pixel,353, 225, 55, 55);
-image(top2Pixel,393,225,60,60);
-image(top3Pixel,435,225,60,60);
-image(top4Pixel,473,225,60,60);
-image(top5Pixel,515,225,60,60);
-image(top6Pixel,353,280,60,60);
-image(top7Pixel,393,280,50,50);
-image(top8Pixel,435,280,60,60);
-image(top9Pixel,473,280,60,60);
-image(top10Pixel,515,280,50,50);
 
 //fullbod//
 image(fullbod1Pixel,363, 400, 40, 40);
@@ -347,7 +353,7 @@ image(fullbod4Pixel,483,400,40,40);
 image(fullbod5Pixel,525,400,40,40);
 
 //fullbod clicker//
-image(displayImg5, 70,135, 270, 400); 
+image(displayImg5,-2 ,110, 372, 525); 
 
 //bottoms
  image(blackBottoms, 340, 300, 60, 60);
@@ -360,8 +366,23 @@ image(displayImg5, 70,135, 270, 400);
  image(thighHighs, 440, 325, 60, 60);
  image(thong, 480, 325, 60, 60);
 
- //bottoms clicker
+ //bottoms
  image(displayImg3, 0, 130, 328, 472)
+
+ //top clicker//
+image(displayImg4,-20,116,400,515);
+
+//top pixel//
+image(top1Pixel,353, 225, 55, 55);
+image(top2Pixel,393,225,60,60);
+image(top3Pixel,435,225,60,60);
+image(top4Pixel,473,225,60,60);
+image(top5Pixel,515,225,60,60);
+image(top6Pixel,353,280,60,60);
+image(top7Pixel,393,280,50,50);
+image(top8Pixel,435,280,60,60);
+image(top9Pixel,473,280,60,60);
+image(top10Pixel,515,280,50,50);
 }
 
 //button shit
@@ -551,26 +572,64 @@ function isMouseInCircle(x, y, r) {
       displayImg = Black;
     }
 
-     //bottoms
-     else if (mouseX >= 340 && mouseX <= 400 && mouseY >= 300 && mouseY <= 360) {
-      displayImg3 = blackBottoms;
+//tops and bottoms//
+    if (mouseX >= 353 && mouseX <= 413 && mouseY >= 280 && mouseY <= 340) {
+      displayImg4 = top6;
+    } else if (mouseX >= 353 && mouseX <= 408 && mouseY >= 225 && mouseY <= 280) {
+        displayImg4 = top1; 
+      } else if (mouseX >= 393 && mouseX <= 453 && mouseY >= 225 && mouseY <= 285) {
+        displayImg4 = top2; 
+      } else if (mouseX >= 435 && mouseX <= 495 && mouseY >= 225 && mouseY <= 285) {
+        displayImg4 = top3; 
+      } else if (mouseX >= 473 && mouseX <= 533 && mouseY >= 225 && mouseY <= 285) {
+        displayImg4 = top4; 
+      } else if (mouseX >= 515 && mouseX <= 575 && mouseY >= 225 && mouseY <= 285) {
+        displayImg4 = top5; 
+    } else if (mouseX >= 393 && mouseX <= 443 && mouseY >= 280 && mouseY <= 330) {
+      displayImg4 = top7;
+    } else if (mouseX >= 435 && mouseX <= 495 && mouseY >= 280 && mouseY <= 340) {
+      displayImg4 = top8;
+    } else if (mouseX >= 473 && mouseX <= 533 && mouseY >= 280 && mouseY <= 340) {
+      displayImg4 = top9;
+    } else if (mouseX >= 515 && mouseX <= 565 && mouseY >= 280 && mouseY <= 330) {
+      displayImg4 = top10;
+    } else if (mouseX >= 340 && mouseX <= 400 && mouseY >= 300 && mouseY <= 360) {
+      displayImg3 = blackBottoms; 
     } else if (mouseX >= 380 && mouseX <= 440 && mouseY >= 300 && mouseY <= 360) {
       displayImg3 = bloomers;
     } else if (mouseX >= 420 && mouseX <= 480 && mouseY >= 300 && mouseY <= 360) {
-      displayImg3 = dress;
+      displayImg3 = dress; 
     } else if (mouseX >= 460 && mouseX <= 520 && mouseY >= 300 && mouseY <= 360) {
-      displayImg3 = longSkirt;
+      displayImg3 = longSkirt; 
     } else if (mouseX >= 500 && mouseX <= 560 && mouseY >= 300 && mouseY <= 360) {
       displayImg3 = miniSkirt;
-    } else if (mouseX >= 360 && mouseX <= 420 && mouseY >= 325 && mouseY <= 385) {
-      displayImg3 = ruffle;
-    } else if (mouseX >= 400 && mouseX <= 460 && mouseY >= 325 && mouseY <= 385) {
-      displayImg3 = street;
-    } else if (mouseX >= 440 && mouseX <= 500 && mouseY >= 325 && mouseY <= 385) {
-      displayImg3 = thighHighs;
-    } else if (mouseX >= 480 && mouseX <= 540 && mouseY >= 325 && mouseY <= 385) {
-      displayImg3 = thong;
-    }
+  } else if (mouseX >= 360 && mouseX <= 420 && mouseY >= 325 && mouseY <= 385) {
+    displayImg3 = ruffle;
+  } else if (mouseX >= 400 && mouseX <= 460 && mouseY >= 325 && mouseY <= 385) {
+    displayImg3 = street; 
+  } else if (mouseX >= 440 && mouseX <= 500 && mouseY >= 325 && mouseY <= 385) {
+    displayImg3 = thighHighs;
+  } else if (mouseX >= 480 && mouseX <= 540 && mouseY >= 325 && mouseY <= 385) {
+    displayImg3 = thong; 
+  }
 
- }
+//fullbody//
+if (mouseX >= 363 && mouseX <= 403 && mouseY >= 400 && mouseY <= 440) {
+  displayImg5 = fullbod1;
+} else if (mouseX >= 403 && mouseX <= 443 && mouseY >= 400 && mouseY <= 440) {
+  displayImg5 = fullbod2;
+} else if (mouseX >= 445 && mouseX <= 485 && mouseY >= 400 && mouseY <= 440) {
+  displayImg5 = fullbod3;
+} else if (mouseX >= 483 && mouseX <= 523 && mouseY >= 400 && mouseY <= 440) {
+  displayImg5 = fullbod4;
+} else if (mouseX >= 525 && mouseX <= 565 && mouseY >= 400 && mouseY <= 440) {
+  displayImg5 = fullbod5;
+}
+
+//download//
+if (mouseX >= 440 && mouseX <= 480 && mouseY >= 525 && mouseY <= 565 && mouseIsPressed) {  saveCanvas('My_Hot_Vampire', 'png');
+  saveCanvas('My_Hot_Vampire', 'png');
+}
+
+}
   
