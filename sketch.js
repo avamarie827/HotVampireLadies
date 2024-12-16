@@ -120,6 +120,7 @@ let displayImg5;
 let displayImg6;
 let displayImg7;
 let displayImg8;
+let displayImg9;
 let empty;
 
 //fullbody//
@@ -265,6 +266,7 @@ function setup() {
   displayImg6 = empty;
   displayImg7 = empty;
   displayImg8 = empty;
+  displayImg9 = empty;
 
 }
 
@@ -292,6 +294,7 @@ if (mouseX >= 362 && mouseX <= 412 && mouseY >= 525 && mouseY <= 565 && mouseIsP
   displayImg6 = empty;
   displayImg7 = empty;
   displayImg8 = empty;
+  displayImg9 = empty;
 }
 
 image(download,440,525,40,40)
@@ -322,6 +325,7 @@ image(necklace, 400, 375, 250, 250);
 
 //accessories clicker
 image(displayImg2, 0, 130, 328, 472)
+image(displayImg9, 0, 130, 328, 472)
 
 //expressions 
 image(miniLeft, 350, 90, 150, 150);
@@ -520,9 +524,9 @@ function isMouseInCircle(x, y, r) {
     } else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 470 && mouseY <= 520) {
       displayImg2 = corset;
     } else if (mouseX >= 478 && mouseX <= 523 && mouseY >= 470 && mouseY <= 520) {
-      displayImg2 = pearls;
+      displayImg9 = pearls;
     } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 470 && mouseY <= 520) {
-      displayImg2 = chains;
+      displayImg9 = chains;
     }
 
     //expressions
