@@ -256,7 +256,8 @@ top10Pixel  = loadImage("Tops/top10pixel.png");
 }
 
 function setup() {
-  createCanvas(600, 600);
+  var canvas = createCanvas(600, 600);
+  canvas.parent("sketch-holder")
 
   displayImg = empty;
   displayImg2 = empty;
