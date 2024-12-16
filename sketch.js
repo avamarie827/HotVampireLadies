@@ -44,6 +44,28 @@ let pinkBlondepixel;
 let White;
 let whitePixel;
 
+//tops//
+let top1
+let top1Pixel
+let top2
+let top2Pixel
+let top3
+let top3Pixel
+let top4
+let top4Pixel
+let top5
+let top5Pixel
+let top6
+let top6Pixel
+let top7
+let top7Pixel
+let top8
+let top8Pixel
+let top9
+let top9Pixel
+let top10
+let top10Pixel
+
 //bottoms
 let blackBottoms;
 let bloomers;
@@ -78,8 +100,21 @@ let circle6;
 let displayImg;
 let displayImg2;
 let displayImg3;
+let displayImg4;
+let displayImg5;
 let empty;
 
+//fullbody//
+let fullbod1;
+let fullbod2;
+let fullbod3;
+let fullbod4;
+let fullbod5;
+let fullbod1Pixel;
+let fullbod2Pixel;
+let fullbod3Pixel;
+let fullbod4Pixel;
+let fullbod5Pixel;
 
 
 function preload() {
@@ -124,6 +159,18 @@ smirk = loadImage("expressions/smirk.PNG");
 tongue = loadImage("expressions/tongue.PNG");
 
 
+//fullbody//
+ fullbod1 = loadImage("fullbody/fullbod1.png");
+ fullbod2 = loadImage("fullbody/fullbod2.png");
+ fullbod3 = loadImage("fullbody/fullbod3.png");
+ fullbod4 = loadImage("fullbody/fullbod4.png");
+ fullbod5 = loadImage("fullbody/fullbod5.png");
+ fullbod1Pixel = loadImage("fullbody/fullbod1Pixel.png");
+ fullbod2Pixel = loadImage("fullbody/fullbod2Pixel.png");
+ fullbod3Pixel = loadImage("fullbody/fullbod3Pixel.png");
+ fullbod4Pixel = loadImage("fullbody/fullbod4Pixel.png");
+ fullbod5Pixel = loadImage("fullbody/fullbod5Pixel.png");
+
 //bases//
 baseBase = loadImage("base/basebase.PNG");
 base1 = loadImage("base/base1.PNG");
@@ -150,6 +197,29 @@ chainBag = loadImage("accessories/chainbag.PNG");
 chains = loadImage("accessories/chains.PNG");
 corset = loadImage("accessories/corset.PNG");
 pearls = loadImage("accessories/pearls.PNG");
+
+//tops// 
+top1 = loadImage("Tops/top1.png");
+top1Pixel = loadImage("Tops/top1pixel.png");
+top2 = loadImage("Tops/top2.png");
+top2Pixel = loadImage("Tops/top2pixel.png");
+top3 = loadImage("Tops/top3.png");
+top3Pixel = loadImage("Tops/top3pixel.png");
+top4 = loadImage("Tops/top4.png");
+top4Pixel= loadImage("Tops/top4pixel.png");
+top5 = loadImage("Tops/top5.png");
+top5Pixel = loadImage("Tops/top5pixel.png");
+top6 = loadImage("Tops/top6.png");
+top6Pixel = loadImage("Tops/top6pixel.png");
+top7 = loadImage("Tops/top7.png");
+top7Pixel = loadImage("Tops/top7pixel.png");
+top8 = loadImage("Tops/top8.png");
+top8Pixel = loadImage("Tops/top8pixel.png");
+top9 = loadImage("Tops/top9.png");
+top9Pixel = loadImage("Tops/top9pixel.png");
+top10 = loadImage("Tops/top10.png");
+top10Pixel  = loadImage("Tops/top10pixel.png");
+
 }
 
 function setup() {
@@ -158,6 +228,8 @@ function setup() {
   displayImg = empty;
   displayImg2 = empty;
   displayImg3 = empty;
+  displayImg4 =empty;
+  displayImg5 =empty;
 }
 
 function draw() {
@@ -173,16 +245,16 @@ function draw() {
   highlight();
 
  //drawing-pixel-ver//
- image(berryPixel, 358, 165, 45, 45);
- image(blondePixel, 398, 165, 45, 45);
- image(curlyPixel, 440, 165, 45, 45);
- image(dracPixel, 478, 165, 50, 50);
- image(edgyPixel, 520, 165, 45, 45);
- image(gingerPixel, 358, 215, 45, 45);
- image(lightBrownpixel, 398, 215, 45, 45);
- image(pinkBlondePixel, 440, 215, 45, 45);
- image(whitePixel, 478, 215, 45, 45);
- image(blackPixel, 520, 215, 45, 45);
+ image(berryPixel, 358, 150, 45, 45);
+ image(blondePixel, 398, 150, 45, 45);
+ image(curlyPixel, 440, 150, 45, 45);
+ image(dracPixel, 478, 150, 50, 50);
+ image(edgyPixel, 520, 150, 45, 45);
+ image(gingerPixel, 358, 180, 45, 45);
+ image(lightBrownpixel, 398, 180, 45, 45);
+ image(pinkBlondePixel, 440, 180, 45, 45);
+ image(whitePixel, 478, 180, 45, 45);
+ image(blackPixel, 520, 180, 45, 45);
 
   //hair-clicky//
 image(displayImg, 70,135, 270, 400); 
@@ -195,16 +267,41 @@ image(corset, 440, 400, 150, 150);
 //accessories clicker
 image(displayImg2, 0, 130, 328, 472)
 
+//top clicker//
+image(displayImg4, 10,10,10,10,10);
+
+//top pixel//
+image(top1Pixel,353, 225, 55, 55);
+image(top2Pixel,393,225,60,60);
+image(top3Pixel,435,225,60,60);
+image(top4Pixel,473,225,60,60);
+image(top5Pixel,515,225,60,60);
+image(top6Pixel,353,280,60,60);
+image(top7Pixel,393,280,50,50);
+image(top8Pixel,435,280,60,60);
+image(top9Pixel,473,280,60,60);
+image(top10Pixel,515,280,50,50);
+
+//fullbod//
+image(fullbod1Pixel,363, 400, 40, 40);
+image(fullbod2Pixel,403,400,40,40);
+image(fullbod3Pixel,445,400,40,40);
+image(fullbod4Pixel,483,400,40,40);
+image(fullbod5Pixel,525,400,40,40);
+
+//fullbod clicker//
+image(displayImg5, 70,135, 270, 400); 
+
 //bottoms
- image(blackBottoms, 340, 350, 60, 60);
- image(bloomers, 380, 350, 60, 60);
- image(dress, 420, 350, 60, 60);
- image(longSkirt, 460, 350, 60, 60);
- image(miniSkirt, 500, 350, 60, 60);
- image(ruffle, 360, 375, 60, 60);
- image(street, 400, 375, 60, 60);
- image(thighHighs, 440, 375, 60, 60);
- image(thong, 480, 375, 60, 60);
+ image(blackBottoms, 340, 300, 60, 60);
+ image(bloomers, 380, 300, 60, 60);
+ image(dress, 420, 300, 60, 60);
+ image(longSkirt, 460, 300, 60, 60);
+ image(miniSkirt, 500, 300, 60, 60);
+ image(ruffle, 360, 325, 60, 60);
+ image(street, 400, 325, 60, 60);
+ image(thighHighs, 440, 325, 60, 60);
+ image(thong, 480, 325, 60, 60);
 
  //bottoms clicker
  image(displayImg3, 0, 130, 328, 472)
@@ -325,48 +422,60 @@ function highlight() {
 
   function mousePressed() {
     //hairs
-    if (mouseX >= 358 && mouseX <= 403 && mouseY >= 165 && mouseY <= 210) {
+    if (mouseX >= 358 && mouseX <= 403 && mouseY >= 150 && mouseY <= 195) {
       displayImg = Berry;
-    } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 165 && mouseY <= 210) {
+    } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 150 && mouseY <= 195) {
       displayImg = Blond;
-    } else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 165 && mouseY <= 210) {
+    } else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 150 && mouseY <= 195) {
       displayImg = curlyBlack;
-    } else if (mouseX >= 478 && mouseX <= 528 && mouseY >= 165 && mouseY <= 215) {
+    } else if (mouseX >= 478 && mouseX <= 528 && mouseY >= 150 && mouseY <= 200) {
       displayImg = Drac;
-    } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 165 && mouseY <= 210) {
+    } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 150 && mouseY <= 195) {
       displayImg = edgy;
-    } else if (mouseX >= 358 && mouseX <= 403 && mouseY >= 215 && mouseY <= 260) {
+    } else if (mouseX >= 358 && mouseX <= 403 && mouseY >= 180 && mouseY <= 225) {
       displayImg = Ginger;
-    } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 215 && mouseY <= 260) {
+    } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 180 && mouseY <= 225) {
       displayImg = lightBrown;
-    }
-    else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 215 && mouseY <= 260) {
+    } else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 180 && mouseY <= 225) {
       displayImg = pinkBlonde;
-    } else if (mouseX >= 478 && mouseX <= 528 && mouseY >= 215 && mouseY <= 260) {
+    } else if (mouseX >= 478 && mouseX <= 528 && mouseY >= 180 && mouseY <= 225) {
       displayImg = White;
-    } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 215 && mouseY <= 260) {
+    } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 180 && mouseY <= 225) {
       displayImg = Black;
     }
 
     //accessories 
-     else if (mouseX >= 358 && mouseX <= 403 && mouseY >= 470 && mouseY <= 510){
+    else if (mouseX >= 358 && mouseX <= 403 && mouseY >= 470 && mouseY <= 520) {
       displayImg2 = bat;
-     } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 470 && mouseY <= 510){
+    } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 470 && mouseY <= 520) {
       displayImg2 = chainBag;
-     } else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 470 && mouseY <= 510){
+    } else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 470 && mouseY <= 520) {
       displayImg2 = corset;
-     }
+    } else if (mouseX >= 478 && mouseX <= 523 && mouseY >= 470 && mouseY <= 520) {
+      displayImg2 = pearls;
+    } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 470 && mouseY <= 520) {
+      displayImg2 = chains;
+    }
 
      //bottoms
-     else if (mouseX >= 358 && mouseX <= 403 && mouseY >= 360 && mouseY <= 410){
+     else if (mouseX >= 340 && mouseX <= 400 && mouseY >= 300 && mouseY <= 360) {
       displayImg3 = blackBottoms;
-     } else if (mouseX >= 378 && mouseX <= 423 && mouseY >= 360 && mouseY <= 410){
+    } else if (mouseX >= 380 && mouseX <= 440 && mouseY >= 300 && mouseY <= 360) {
       displayImg3 = bloomers;
-     } else if (mouseX >= 418 && mouseX <= 463 && mouseY >= 360 && mouseY <= 410){
+    } else if (mouseX >= 420 && mouseX <= 480 && mouseY >= 300 && mouseY <= 360) {
       displayImg3 = dress;
-     } else if (mouseX >= 478 && mouseX <= 503 && mouseY >= 360 && mouseY <= 410){
+    } else if (mouseX >= 460 && mouseX <= 520 && mouseY >= 300 && mouseY <= 360) {
       displayImg3 = longSkirt;
-     } else if (mouseX >= 508 && mouseX <= 553 && mouseY >= 360 && mouseY <= 410){
+    } else if (mouseX >= 500 && mouseX <= 560 && mouseY >= 300 && mouseY <= 360) {
       displayImg3 = miniSkirt;
-     }
+    } else if (mouseX >= 360 && mouseX <= 420 && mouseY >= 325 && mouseY <= 385) {
+      displayImg3 = ruffle;
+    } else if (mouseX >= 400 && mouseX <= 460 && mouseY >= 325 && mouseY <= 385) {
+      displayImg3 = street;
+    } else if (mouseX >= 440 && mouseX <= 500 && mouseY >= 325 && mouseY <= 385) {
+      displayImg3 = thighHighs;
+    } else if (mouseX >= 480 && mouseX <= 540 && mouseY >= 325 && mouseY <= 385) {
+      displayImg3 = thong;
+    }
+
     }
