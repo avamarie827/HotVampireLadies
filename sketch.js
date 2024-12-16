@@ -77,6 +77,7 @@ let circle5;
 let circle6;
 let displayImg;
 let displayImg2;
+let displayImg3;
 let empty;
 
 
@@ -156,6 +157,7 @@ function setup() {
 
   displayImg = empty;
   displayImg2 = empty;
+  displayImg3 = empty;
 }
 
 function draw() {
@@ -192,6 +194,20 @@ image(corset, 440, 400, 150, 150);
 
 //accessories clicker
 image(displayImg2, 0, 130, 328, 472)
+
+//bottoms
+ image(blackBottoms, 340, 350, 60, 60);
+ image(bloomers, 380, 350, 60, 60);
+ image(dress, 420, 350, 60, 60);
+ image(longSkirt, 460, 350, 60, 60);
+ image(miniSkirt, 500, 350, 60, 60);
+ image(ruffle, 360, 375, 60, 60);
+ image(street, 400, 375, 60, 60);
+ image(thighHighs, 440, 375, 60, 60);
+ image(thong, 480, 375, 60, 60);
+
+ //bottoms clicker
+ image(displayImg3, 0, 130, 328, 472)
 }
 
 //button shit
@@ -341,7 +357,16 @@ function highlight() {
       displayImg2 = corset;
      }
 
-
-
-
-}
+     //bottoms
+     else if (mouseX >= 358 && mouseX <= 403 && mouseY >= 360 && mouseY <= 410){
+      displayImg3 = blackBottoms;
+     } else if (mouseX >= 378 && mouseX <= 423 && mouseY >= 360 && mouseY <= 410){
+      displayImg3 = bloomers;
+     } else if (mouseX >= 418 && mouseX <= 463 && mouseY >= 360 && mouseY <= 410){
+      displayImg3 = dress;
+     } else if (mouseX >= 478 && mouseX <= 503 && mouseY >= 360 && mouseY <= 410){
+      displayImg3 = longSkirt;
+     } else if (mouseX >= 508 && mouseX <= 553 && mouseY >= 360 && mouseY <= 410){
+      displayImg3 = miniSkirt;
+     }
+    }
