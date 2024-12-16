@@ -21,6 +21,17 @@ let pink;
 let purple;
 let smirk;
 let tongue;
+let miniHeart;
+let miniKiss;
+let miniLeft;
+let miniOpen;
+let miniRight;
+let miniSmile;
+let miniSmirk;
+let miniStare;
+let miniTongue;
+let miniWink;
+
 
 //hair//
 let Berry;
@@ -83,6 +94,8 @@ let chainBag;
 let chains;
 let corset;
 let pearls;
+let pearlSmall;
+let necklace;
 
 //msc//
 let faceTrigger = false;
@@ -102,6 +115,9 @@ let displayImg2;
 let displayImg3;
 let displayImg4;
 let displayImg5;
+let displayImg6;
+let displayImg7;
+let displayImg8;
 let empty;
 
 //fullbody//
@@ -157,6 +173,16 @@ pink = loadImage("expressions/pink.PNG");
 purple = loadImage("expressions/purple.PNG");
 smirk = loadImage("expressions/smirk.PNG");
 tongue = loadImage("expressions/tongue.PNG");
+miniHeart = loadImage("expressions/miniheart.PNG");
+miniKiss = loadImage("expressions/minikiss.PNG");
+miniLeft = loadImage("expressions/minileft.PNG");
+miniOpen = loadImage("expressions/miniopen.PNG");
+miniRight = loadImage("expressions/miniright.PNG");
+miniSmile = loadImage("expressions/minismile.PNG");
+miniSmirk = loadImage("expressions/minismirk.PNG");
+miniStare = loadImage("expressions/ministare.PNG");
+miniTongue = loadImage("expressions/minitongue.PNG");
+miniWink = loadImage("expressions/miniwink.PNG");
 
 
 //fullbody//
@@ -197,6 +223,8 @@ chainBag = loadImage("accessories/chainbag.PNG");
 chains = loadImage("accessories/chains.PNG");
 corset = loadImage("accessories/corset.PNG");
 pearls = loadImage("accessories/pearls.PNG");
+pearlSmall = loadImage("accessories/pearlssmall.PNG");
+necklace = loadImage("accessories/necklace.PNG");
 
 //tops// 
 top1 = loadImage("Tops/top1.png");
@@ -230,6 +258,10 @@ function setup() {
   displayImg3 = empty;
   displayImg4 =empty;
   displayImg5 =empty;
+  displayImg6 = empty;
+  displayImg7 = empty;
+  displayImg8 = empty;
+
 }
 
 function draw() {
@@ -244,6 +276,11 @@ function draw() {
   row1();
   highlight();
 
+   //base
+
+ //base clicker
+ image(displayImg6, 0, 130, 328, 472)
+
  //drawing-pixel-ver//
  image(berryPixel, 358, 150, 45, 45);
  image(blondePixel, 398, 150, 45, 45);
@@ -256,16 +293,36 @@ function draw() {
  image(whitePixel, 478, 180, 45, 45);
  image(blackPixel, 520, 180, 45, 45);
 
-  //hair-clicky//
-image(displayImg, 70,135, 270, 400); 
-
-//accessories
+ //accessories
 image(bat, 358, 400, 150, 150);
 image(chainBag, 398, 400, 125, 125);
 image(corset, 440, 400, 150, 150);
+image(pearlSmall, 375, 300, 300, 300);
+image(necklace, 400, 375, 250, 250);
+
 
 //accessories clicker
 image(displayImg2, 0, 130, 328, 472)
+
+//expressions 
+image(miniLeft, 350, 90, 150, 150);
+image(miniSmile, 350, 110, 150, 150);
+image(miniRight, 390, 90, 150, 150);
+image(miniTongue, 390, 110, 150, 150);
+image(miniWink, 430, 90, 150, 150);
+image(miniKiss, 430, 110, 150, 150);
+image(miniStare, 470, 90, 150, 150);
+image(miniSmirk, 470, 110, 150, 150);
+image(miniHeart, 510, 90, 150, 150);
+image(miniOpen, 510, 110, 150, 150);
+
+//expressions clicker
+
+image(displayImg7, 0, 130, 328, 472)
+image(displayImg8, 0, 130, 328, 472)
+
+  //hair-clicky//
+image(displayImg, 70,135, 270, 400); 
 
 //top clicker//
 image(displayImg4, 10,10,10,10,10);
@@ -333,12 +390,6 @@ function row1() {
   row1Update();
   stroke(0);
   strokeWeight(objectStroke);
-  //ellipse(circle1, 55, 30);
- // ellipse(circle2, 55, 30);
-  //ellipse(circle3, 55, 30);
-  // ellipse(circle4, 55, 30);
-  // ellipse(circle5, 55, 30);
-  // ellipse(circle6, 55, 30);
 
   // strokeWeight(1);
   fill("#1f1618");
@@ -420,7 +471,63 @@ function highlight() {
   }
 }
 
+function isMouseInCircle(x, y, r) {
+  return dist(mouseX, mouseY, x, y) < r; 
+}
+
   function mousePressed() {
+
+    if (isMouseInCircle(circle1, 55, 30)) {
+      displayImg6 = base6;
+    } else if (isMouseInCircle(circle2, 55, 30)) {
+      displayImg6 = base5;
+    } else if (isMouseInCircle(circle3, 55, 30)) {
+      displayImg6 = base4;
+    } else if (isMouseInCircle(circle4, 55, 30)) {
+      displayImg6 = base3;
+    } else if (isMouseInCircle(circle5, 55, 30)) {
+      displayImg6 = base2;
+    } else if (isMouseInCircle(circle6, 55, 30)) {
+      displayImg6 = base1;
+    }
+
+     //accessories 
+     else if (mouseX >= 358 && mouseX <= 403 && mouseY >= 470 && mouseY <= 520) {
+      displayImg2 = bat;
+    } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 470 && mouseY <= 520) {
+      displayImg2 = chainBag;
+    } else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 470 && mouseY <= 520) {
+      displayImg2 = corset;
+    } else if (mouseX >= 478 && mouseX <= 523 && mouseY >= 470 && mouseY <= 520) {
+      displayImg2 = pearls;
+    } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 470 && mouseY <= 520) {
+      displayImg2 = chains;
+    }
+
+    //expressions
+      else if (mouseX >= 358 && mouseX <= 403 && mouseY >= 90 && mouseY <= 110) {
+      displayImg7 = normale;
+    } else if (mouseX >= 358 && mouseX <= 403 && mouseY >= 110 && mouseY <= 130) {
+      displayImg8 = purple;
+    }   else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 90 && mouseY <= 110) {
+      displayImg7 = borede;
+    } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 110 && mouseY <= 130) {
+      displayImg8 = tongue;
+    } else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 90 && mouseY <= 110) {
+      displayImg7 = winke;
+    } else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 110 && mouseY <= 130) {
+      displayImg8 = pink;
+    } else if (mouseX >= 478 && mouseX <= 523 && mouseY >= 90 && mouseY <= 110) {
+      displayImg7 = straight;
+    } else if (mouseX >= 478 && mouseX <= 523 && mouseY >= 110 && mouseY <= 130) {
+      displayImg8 = smirk;
+    } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 90 && mouseY <= 110) {
+      displayImg7 = heartEyes;
+    } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 110 && mouseY <= 130) {
+      displayImg8 = orange;
+    } 
+
+  
     //hairs
     if (mouseX >= 358 && mouseX <= 403 && mouseY >= 150 && mouseY <= 195) {
       displayImg = Berry;
@@ -444,19 +551,6 @@ function highlight() {
       displayImg = Black;
     }
 
-    //accessories 
-    else if (mouseX >= 358 && mouseX <= 403 && mouseY >= 470 && mouseY <= 520) {
-      displayImg2 = bat;
-    } else if (mouseX >= 398 && mouseX <= 443 && mouseY >= 470 && mouseY <= 520) {
-      displayImg2 = chainBag;
-    } else if (mouseX >= 440 && mouseX <= 485 && mouseY >= 470 && mouseY <= 520) {
-      displayImg2 = corset;
-    } else if (mouseX >= 478 && mouseX <= 523 && mouseY >= 470 && mouseY <= 520) {
-      displayImg2 = pearls;
-    } else if (mouseX >= 520 && mouseX <= 565 && mouseY >= 470 && mouseY <= 520) {
-      displayImg2 = chains;
-    }
-
      //bottoms
      else if (mouseX >= 340 && mouseX <= 400 && mouseY >= 300 && mouseY <= 360) {
       displayImg3 = blackBottoms;
@@ -478,4 +572,5 @@ function highlight() {
       displayImg3 = thong;
     }
 
-    }
+ }
+  
